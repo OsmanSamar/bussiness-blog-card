@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bussiness Blog Card</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Roboto: ["Roboto", "sans-serif"],
+              Poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              ofwhite: "#F3F5F8",
+              black: "#111729",
+              white: "#FFFFFF",
+              gray: "#677489",
+            },
+          },
+        },
+      };
+    </script>
+    <!--Shadow Pulse This effect adds a pulsing shadow to the image -->
+    <style>
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 10px 20px rgba(0, 0, 0, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+      }
+      .shadow-pulse {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-ofwhite p-8 flex items-center justify-center min-h-screen md:m-8"
+  >
+    <!-- The Container  -->
+    <div class="bg-white rounded-3xl w-[320px] cursor-pointer shadow-pulse">
+      <!-- The Hero Image -->
+      <div class="relative">
+        <img
+          src="./images/hero-image-business-card.png"
+          class="w-full rounded-3xl"
+        />
+        <!-- The overlay Image -->
+        <!-- Span bottom edge -->
+        <img
+          src="./images/white-overlay.svg"
+          class="absolute inset-x-0 bottom-0 w-full"
+        />
+      </div>
+      <!-- End of the Hero Image -->
+
+      <!-- The Title and Paragraph -->
+      <div class="m-4 p-2">
+        <h2 class="text-black font-Poppins text-xl">
+          Perfect solution for small business
+        </h2>
+        <p class="text-xs text-gray font-Roboto my-2">
+          Small businesses need to generate leads to grow. You can use tools
+          like Ringy.
+        </p>
+      </div>
+
+      <!-- The End  Title and Paragraph -->
+
+      <!-- Divider -->
+      <div class="border-t-2 border-slate-400/20 my-2"></div>
+
+      <!-- Avatar Section -->
+      <div class="flex items-center m-6">
+        <img
+          src="./images/avatar-image-business-card.png"
+          class="rounded-full w-12 h-12"
+          alt="Avatar"
+        />
+        <ul class="ml-4">
+          <li class="text-sm font-bold font-Roboto">Amy Burgess</li>
+          <li class="text-xs text-gray font-Roboto">
+            Customer Manager, Solution Oy
+          </li>
+        </ul>
+      </div>
+      <!-- End of the Avatar Section -->
+    </div>
+  </body>
+</html>
